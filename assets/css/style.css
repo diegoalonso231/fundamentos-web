@@ -1,0 +1,63 @@
+/*
+Estilos da pagina index.html
+*/
+.center {
+    text-align: center;
+}
+.justify {
+    text-align: justify;
+}
+
+.interface{
+    width: 1000px;
+  /*  background-image:url("assets/img/LayoutDungeon.jpg");*/
+  background: #FFFFFF url( "assets/img/chao.png") no-repeat right top fixed;
+
+    background-color: rgb(255, 255, 255) ;
+    height: auto;   
+    padding: 20px;
+    margin: 10px auto 0px auto;
+
+    opacity: 0.6;
+}
+
+
+
+.container{
+display: flex;
+flex-flow: row;
+justify-content: center ;
+align-items: center;
+}
+#menu li{
+    display: inline;
+    padding: 30px;
+}
+
+#menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+#menu li a:hover{
+    color: darkred;
+    cursor: pointer;
+}
+.p-30 {
+    padding: 30px;
+}
+
+/*
+Estilos da pagina contato.html
+*/
+
+.button {
+    background-color: #1A0F0F; /* preto */
+    border: none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
