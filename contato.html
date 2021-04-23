@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../fundamentos-web/assets/css/style.css">
+
+
 </head>
 <body>
     <ul id ="menu">
@@ -19,19 +21,22 @@
 <h1>
     Entre em contato...
 </h1>
-<form class="">
+<form>
     <label for ="nome">Nome:</label><br>
-    <input type="text" id="nome">
-    <br>
+    <input type="text" id="nome" onkeyup='validaNome()'>
+    <div id='txtNome'></div>
     <br>
     <label for ="email">E-mail:</label><br>
-    <input type="text" id="nome">
-    <br>
+    <input type="email" id="email" onkeyup='validaEmail()'>
+    <div id = 'txtEmail'></div>
     <br>
     <label for ="assunto">Assunto:</label><br>
     <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea><br>
+    <div id = 'txtAssunto'></div>
+    
 
-    <button class ="button"> Enviar</button>
+    <button onclick ="enviar()"class ="button"> Enviar</button>
 </form>
+<script src = "assets/js/script.js"></script>
 </body>
 </html>

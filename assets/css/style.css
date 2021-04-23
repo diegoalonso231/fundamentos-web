@@ -7,22 +7,26 @@ Estilos da pagina index.html
 .justify {
     text-align: justify;
 }
-
-.interface{
+ .interface{
     width: 1000px;
-  /*  background-image:url("assets/img/LayoutDungeon.jpg");*/
-  background: #FFFFFF url( "assets/img/chao.png") no-repeat right top fixed;
-
-    background-color: rgb(255, 255, 255) ;
+    background-image:url("../img/LayoutDungeon.jpg");
+    background-color: rgb(116, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     height: auto;   
-    padding: 20px;
-    margin: 10px auto 0px auto;
-
-    opacity: 0.6;
+    padding: 10px;
+    margin: 0px auto 0px auto;
+} 
+body 
+{
+  background-color: rgb(217, 255, 0);
+  background-image:url("../gif/fogo.gif");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  margin-right: 40px;
+  background-attachment: fixed;
 }
-
-
-
 .container{
 display: flex;
 flex-flow: row;
@@ -32,19 +36,26 @@ align-items: center;
 #menu li{
     display: inline;
     padding: 30px;
+    margin: 0;
+
 }
 
 #menu li a{
     text-decoration: none;
-    color: black;
-    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
 }
 #menu li a:hover{
     color: darkred;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 .p-30 {
     padding: 30px;
+    
 }
 
 /*
