@@ -1,77 +1,71 @@
-let nome = document.getElementById('nome')
-let email = document.getElementById('email')
+/*
+Case Sensitive = reconhece letras maiusculas e minusculas
+por Tag: getElementByTagName()
+por Id: getElementById()
+por Nome: getElementsByName()
+por Classe: getElementsByClassName()
+por Seletor: querySelector()
+*/
+
+let nome = window.document.getElementById('nome')
+let email = document.querySelector('#email')
 let assunto = document.querySelector('#assunto')
-let maps = document.getElementById('mapa')
-
-let nomeOk =  false
+let nomeOk = false
 let emailOk = false
-let textoOk = false
+let assuntoOk = false
+let mapa = document.querySelector('#mapa')
 
-nome.style.width= "100%"
+nome.style.width = '100%'
+email.style.width = '100%'
 
-email.style.width= "100%"
-
-function validaNome(){
-    let textNome = document.getElementById("textNome")
-    //verifica o tamanho do 'nome'
-    if (nome.value.length < 3){
-        textNome.innerHTML="Nome Invalido"
-        nomeOk= false
-        nome.style.borderRadius= "5px"
-        nome.style.border = '2px solid'
-        textNome.style.color= "red"
-    }else{
-        textNome.innerText="Nome válido"
-        textNome.style.color= "green"
-        nomeOk = true
-    }
-}
-function validaEmail(){
-    let textEmail = document.getElementById("textEmail")
-    // indeOF retorna 1 ou -1 para o elemento selecionado se no email não(-1) tiver "@" e ".""
-    if(email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1){
-        textEmail.innerText = 'Email inválido'
-        textEmail.style.color="red"
-        emailOk=false
-
-    }else{       
-         textEmail.innerText = "Email válido"
-         textEmail.style.color="green"
-         emailOk=true
-}
-}
-function textoArea(){
-    let texto = document.getElementById('textArea')
-
-    if(assunto.value.length < 100){
-        texto.innerHTML= "<strong>Texto válido<strong>"
-        texto.style.color="green"
-        //texto.style.display="block"
-        textoOk= true
-    }else{
-        texto.innerHTML= "<strong>Texto inválido<br> Favor colocar menos que 100 caracteres<strong>"
-        texto.style.color="red"  
-        textoOk=false 
-       // texto.style.display="none"
-
-    }
+function validaNome() {
+   let txtNome = document.querySelector('#txtNome')
+   if (nome.value.length < 3) {
+      txtNome.innerHTML = 'Nome Inválido'
+      txtNome.style.color = 'red' 
+   } else {
+      txtNome.innerHTML = 'Nome Válido'
+      txtNome.style.color = 'green'
+      nomeOk = true
+   }
 
 }
-function validar(){
-    if(nomeOk == true && emailOk == true && textoOk == true){
-        alert("Dados enviado com sucesso!")
-    }else{
-        alert("[ERRO ao enviar dados!]")
-    }
-}
-function entrar(){
-    maps.style.width="200%"
-    maps.style.height="800%"
+function validaEmail() {
+   let txtEmail = document.querySelector('#txtEmail') 
 
-    //width="250" height="200"
+   if (email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1 ) {
+      txtEmail.innerHTML = 'E-mail inválido'
+      txtEmail.style.color = 'red'
+   } else {
+      txtEmail.innerHTML = 'E-mail válido'
+      txtEmail.style.color = 'green'
+      emailOk = true
+   }
 }
+function validaAssunto() {
+   let txtAssunto = document.querySelector('#txtAssunto')
 
-function sair(){
-    maps.style.width="250px"
-    maps.style.height="200px"
+   if (assunto.value.length >= 100) {
+      txtAssunto.innerHTML = 'Texto é muito grande, digite no máximo 100 caracteres'
+      txtAssunto.style.color = 'red'
+      txtAssunto.style.display = 'block'
+   } else {
+      txtAssunto.style.display = 'none'
+      assuntoOk = true
+   }
+}
+function enviar() {
+   if (nomeOk == true && emailOk == true && assuntoOk == true) {
+      alert ('Formulário enviado com sucesso!')
+   } else {
+      alert ('Preencha o formulário corretamente antes de enviar...')
+   }
+}
+function mapaZoom() {
+   mapa.style.width = '800px'
+   mapa.style.height = '600px'
+}
+function mapaNormal() {
+   mapa.style.width = '400px'
+   mapa.style.height = '250px'
 }
